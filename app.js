@@ -1,6 +1,3 @@
-let inputext = "";
-let outputext = "";
-
 
 function encriptar(text){  //Función para encriptar el texto
     let encriptartexto = text 
@@ -52,6 +49,5 @@ document.getElementById("copiaBoton").addEventListener ("click", function() {
     let outputext = document.getElementById("salidaTexto");
     outputext.select();
     document.execCommand("copy");
-    alert("Texto copiado al portapapeles");
 })
 

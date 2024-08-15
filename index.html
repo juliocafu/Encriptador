@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de Julio Santos</title>
+    <meta name="author" content="Julio Santos">
+    <title>Encriptador de texto por Julio Santos</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">   
 </head>
 <body>
-    <div class="contenedor">
-        <h1 class="titulo-texto">
-            Ingrese el texto aquí
-            <textarea id="entradaTexto" placeholder="Ingrese el texto aquí">
-            </textarea>
-            <div>
-                <button id="encriptarBoton">Encriptar</button>
-                <button id="desencriptarBoton">Desencriptar</button>
-            </div>
-            <textarea id="salidaTexto" placeholder="Resultado" readonly>
-            </textarea>
-            <button id="copiaBoton">Copiar</button>
-        </h1>
-    </div>
+    <main>
+        <div>
+            <img class="logo" src="assets/logo.svg" alt="Logo Alura Latam">
+        </div> 
+        <section class="parte_uno">
+            <textarea class="texto-encriptar" id="entradaTexto" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="contenedor">
+                    <span><img class="titulo-texto" src="assets/icon-information.svg">Solo letras minúsculas y sin acentos</span>
+                </div>
+                <div class="botones">
+                    <button id="encriptarBoton">Encriptar</button>
+                    <button id="desencriptarBoton">Desencriptar</button>
+                </div>
+        </section>
+        <section class="parte_dos">
+                <textarea class="ocultar-muneco" id="salidaTexto"  readonly></textarea>
+                <div class="contenedor_dos">
+                    <img id="muneco" src="assets/Muñeco.png" alt="Muñeco">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+                <button id="copiaBoton">Copiar</button>
+        </section>
+    </main>
     <script src="app.js"></script>
     <footer class="footer">
         <p>Desarrollado por Julio Santos año 2024</p>
