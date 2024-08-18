@@ -6,32 +6,33 @@
     <meta name="author" content="Julio Santos">
     <title>Encriptador de texto por Julio Santos</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <img class="logo" src="assets/logo.svg" alt="Logo Alura Latam">
+    </header>
     <main>
-        <div>
-            <img class="logo" src="assets/logo.svg" alt="Logo Alura Latam">
-        </div> 
         <section class="parte_uno">
-            <textarea class="texto-encriptar" id="entradaTexto" placeholder="Ingrese el texto aquí"></textarea>
-                <div class="contenedor">
-                    <span><img class="titulo-texto" src="assets/icon-information.svg">Solo letras minúsculas y sin acentos</span>
-                </div>
-                <div class="botones">
-                    <button id="encriptarBoton">Encriptar</button>
-                    <button id="desencriptarBoton">Desencriptar</button>
-                </div>
+            <textarea class="texto-encriptar" id="entradaTexto" cols="30" rows="10"  placeholder="Ingrese el texto aquí"></textarea>
+            <div class="contenedor">
+                    <div class="titulo-texto"><img src="assets/icon-information.svg"><span>Solo letras minúsculas y sin acentos</span>
+                    </div>
+                <button class="boton_enc" id="encriptarBoton">Encriptar</button>
+                <button class="boton_desen" id="desencriptarBoton">Desencriptar</button>
+            </div>
         </section>
         <section class="parte_dos">
-                <textarea class="ocultar-muneco" id="salidaTexto"  readonly></textarea>
+                <textarea class="ocultar_muneco" id="salidaTexto"  readonly style="display: none;"></textarea>
+                <img class="img_muneco" id="muneco" src="assets/Muñeco.png" alt="Muñeco">
                 <div class="contenedor_dos">
-                    <img id="muneco" src="assets/Muñeco.png" alt="Muñeco">
-                    <h2>Ningún mensaje fue encontrado</h2>
-                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                    <h2 class="titulo-muneco" id="muneco-titulo">Ningún mensaje fue encontrado</h2>
+                    <p class="texto-muneco" id="muneco-texto">Ingresa el texto que desees encriptar o desencriptar</p>
                 </div>
-                <button id="copiaBoton">Copiar</button>
-        </section>
+                <button class="boton_copia" id="copiaBoton" style="display: none;">Copiar</button>
+            </section>
     </main>
     <script src="app.js"></script>
     <footer class="footer">
